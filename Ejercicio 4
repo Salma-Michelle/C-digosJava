@@ -1,0 +1,35 @@
+package fibonacci;
+
+public class Fibonacci {
+
+    public static void main(String[] args) {
+
+        // Definir: Comprender el problema
+        // Necesitamos imprimir los primeros 50 números de la secuencia de Fibonacci
+
+        // Descubrir: Identificar los elementos clave
+        // La secuencia comienza con 0 y 1, y cada número siguiente es la suma de los dos anteriores
+
+        // Diseñar: Planificar la solución
+        // Usaremos un bucle para calcular e imprimir los 50 números
+        
+        // Desarrollar: Escribir el código
+        int n = 50; // Cantidad de términos a imprimir
+        long primero = 0, segundo = 1; // Variables para los primeros dos números
+        
+        System.out.println("Los primeros " + n + " numeros de la secuencia de Fibonacci son:");
+        
+        for (int i = 0; i < n; i++) {
+            System.out.print(primero + " ");
+            long siguiente = primero + segundo; // Calcular el siguiente número
+            primero = segundo; // Actualizar valores
+            segundo = siguiente;
+        }
+        
+        // Depurar: Revisar errores
+        // Se prueba el código y se ajusta si es necesario
+        
+        // Desplegar: Ejecutar y compartir la solución
+        // Se ejecuta el programa y se verifica la salida correcta
+    }
+}
