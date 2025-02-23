@@ -1,0 +1,31 @@
+package com.mycompany.alumnostotal;
+import java.util.Scanner;
+public class AlumnosTotal {
+    public static void main(String[] args) {
+
+       Scanner scanner = new Scanner(System.in);  
+            int mejorNumControl = 0; // Variables 
+            double mejorPromedio = 0;
+            
+            for (int i = 1; i <= 20; i++) {             //Bucle para los datos de los 20 alumnos 
+                System.out.print("Ingrese el número de control del alumno " + i + ": ");
+                int numControl = scanner.nextInt();      //Leer numero de controlll
+            
+                double sumaCalificaciones = 0;           //Bucle para calificaciones 
+                for (int j = 1; j <= 5; j++) {
+                    System.out.print("Ingrese la calificación de la unidad " + j + ": ");
+                    double calificacion = scanner.nextDouble();
+                    sumaCalificaciones += calificacion;
+                }
+                double promedio = sumaCalificaciones / 5;
+                
+                if (promedio > mejorPromedio) {
+                    mejorPromedio = promedio;              //Acrualizar prom. 
+                    mejorNumControl = numControl;
+                }
+            }//Resultado de mejor promedio enseñando num. de control
+            System.out.println("El alumno con el mejor promedio es el de número de control: " + mejorNumControl);
+        }
+    }
+
+   
