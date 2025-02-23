@@ -1,0 +1,25 @@
+package pagosmensuales;
+
+import java.util.Scanner;
+
+public class PagosMensuales {
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Ingrese la cantidad de meses (N): ");
+            int N = scanner.nextInt(); // Número de meses
+            double pagoMensual = 100.0; // Pago inicial
+            double totalPago = 0.0; // Acumulador del total
+            
+            System.out.println("\nMes\tPago");
+            System.out.println("------------------");
+            
+            for (int mes = 1; mes <= N; mes++) {
+                System.out.println(mes + "\t$" + pagoMensual);
+                totalPago += pagoMensual; // Sumar al total
+                pagoMensual *= 2; // Duplicar el pago para el siguiente mes
+            }   
+            
+            System.out.println("\nTotal a pagar después de " + N + " meses: $" + totalPago);
+        }
+    }
+}
